@@ -1,0 +1,64 @@
+batk:
+  label: "Increases attack power"
+  priority: 1
+  contribution: 1
+bampatk:
+  label: "Decreases attack damage"
+  priority: 5
+  contribution: 5
+bcrit:
+  label: "Increases crit damage"
+  priority: 1
+  contribution: 5
+bcritrate:
+  label: "Increases crit rate"
+  priority: 5
+  contribution: 3
+bdef:
+  label: "Increases defense"
+  priority: 5
+  contribution: 1
+bimmun:
+  label: "Immunity"
+  priority: 1
+  contribution: 3
+dbatk:
+  label: "Decreases attack power"
+  priority: 2
+  contribution: 3
+dbdef:
+  label: "Decreases defense"
+  priority: 1
+  contribution: 4
+dampatk:
+  label: "Increases received damage"
+  priority: 1
+  contribution: 5
+cleanse:
+  label: "Cleanses weakening effects"
+  priority: 2
+  contribution: 4
+cleanses1:
+  label: "Cleanses weakening effects pincer"
+  priority: 2
+  contribution: 4
+dps:
+  label: "Deals damage"
+  priority: 1
+  contribution: 5
+applus:
+  label: "Adds attack point"
+  priority: 4
+  contribution: 5
+appluss1:
+  label: "Adds attack point pincer"
+  priority: 3
+  contribution: 5
+cdminu:
+  label: "Lowers cooldown"
+  priority: 4
+  contribution: 5
+cdminus1:
+  label: "Lowers cooldown pincer"
+  priority: 4
+  contribution: 5

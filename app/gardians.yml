@@ -1,0 +1,39 @@
+rook_indra:
+  name: 'Indra'
+  direction: 'rook'
+  abilities:
+    - 'cleanse'
+    - 'bimmun'
+knight_claudia:
+  name: 'Claudia'
+  direction: 'knight'
+  abilities:
+    - 'cleansec'
+    - 'batk'
+    - 'bcrit'
+king_dia:
+  name: 'Dia'
+  direction: 'king'
+  abilities:
+    - 'dampatk'
+    - 'dps'
+queen_jorm:
+  name: 'Jorm'
+  direction: 'queen'
+  abilities:
+    - 'batk'
+    - 'bcrit'
+    - 'bampatk'
+    - 'dbdef'
+    - 'applusa'
+bishop_fritz:
+  name: 'Fritz'
+  direction: 'bishop'
+  abilities:
+    - 'cdminu'
+    - 'cdminus1'
+rook_tahn:
+  name: 'Tahn'
+  direction: 'rook'
+  abilities:
+    - 'dps'

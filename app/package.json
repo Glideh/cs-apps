@@ -1,0 +1,13 @@
+{
+  "name": "cs_gvg_teams",
+  "version": "0.0.1",
+  "description": "Chain Strike GvG Team Finder",
+  "author": "Pierre de LESPINAY <gprod.net+github@gmail.com>",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "js-yaml": "3.12.1"
+  }
+}
