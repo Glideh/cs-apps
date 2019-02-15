@@ -2,6 +2,13 @@ const yaml = require('js-yaml');
 const fs = require('fs');
 
 const skills = yaml.safeLoad(fs.readFileSync('./skills.yml', 'utf8'));
+const directions = {
+    knight: 'cava',
+    queen: 'reine',
+    king: 'roi',
+    rook: 'tour',
+    bishop: 'fou',
+};
 
 
 function skillAlreadyInTeam(gardian, team)
@@ -44,7 +51,6 @@ function canFitIn(team, gardian)
             return false;
         }
         if (skillAlreadyInTeam(gardian, team)) {
-            // console.log('Skill already found in the team');
             return false;
         }
     }
@@ -67,17 +73,16 @@ function shuffleObject(data)
 
 function findTeam(gardians)
 {
-    let team = {
+    let team = /*shuffleObject*/({
         knight: null,
         queen: null,
         king: null,
         rook: null,
         bishop: null,
-    };
+    });
     gardians = shuffleObject(gardians);
     for (let key in gardians) {
         let gardian = gardians[key];
-        // console.log(`# Checking if ${gardian.direction} ${gardian.name} can find it's place`);
         if (canFitIn(team, gardian)) {
             team[gardian.direction] = gardian;
         }
@@ -88,8 +93,16 @@ function findTeam(gardians)
 
 function teamCRC(team)
 {
-    return Object.keys(team).map((direction) => (
+    return Object.keys(directions).map((direction) => (
         (direction + ' ' + (team[direction] ? team[direction].name : '')).padEnd(15)
+    )).join(' | ');
+}
+
+
+function showTeam(team)
+{
+    return Object.keys(directions).map((direction) => (
+        (':' + directions[direction] + ': ' + (team[direction] ? team[direction].name : '')).padEnd(15)
     )).join(' | ');
 }
 
@@ -121,7 +134,6 @@ function teamIsValid(team, teams)
         // console.log('Team is not complete');
         return false;
     }
-    console.log(teamCRC(team));
     return true;
 }
 
@@ -129,9 +141,21 @@ function teamIsValid(team, teams)
 let gardians = yaml.safeLoad(fs.readFileSync('./gardians.yml', 'utf8'));
 
 let teams = [];
-for (let i = 0; i < 20; i++) {
+// let teams = [{
+//     knight: gardians.knight_claudia,
+//     queen: gardians.queen_lirina,
+//     king: gardians.king_dia,
+//     rook: gardians.rook_fritz,
+//     bishop: gardians.bishop_krishna,
+// }];
+for (let i = 0; i < 100; i++) {
+    teams.push();
     let team = findTeam(gardians);
     if (teamIsValid(team, teams)) {
         teams.push(team);
     }
+}
+
+for (let x in teams) {
+    console.log(showTeam(teams[x]));
 }
