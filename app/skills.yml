@@ -3,7 +3,7 @@ batk:
   priority: 1
   contribution: 1
 bampatk:
-  label: "Decreases attack damage"
+  label: "Increases attack damage"
   priority: 5
   contribution: 5
 bcrit:
@@ -16,6 +16,14 @@ bcritrate:
   contribution: 3
 bdef:
   label: "Increases defense"
+  priority: 5
+  contribution: 1
+breducdmg:
+  label: "Decreases damage received"
+  priority: 5
+  contribution: 1
+bshield:
+  label: "Adds a shield"
   priority: 5
   contribution: 1
 bimmun:
@@ -34,6 +42,10 @@ dampatk:
   label: "Increases received damage"
   priority: 1
   contribution: 5
+dbuffplus:
+  label: "Increases weakening effect duration"
+  priority: 1
+  contribution: 5
 cleanse:
   label: "Cleanses weakening effects"
   priority: 2
@@ -46,11 +58,15 @@ dps:
   label: "Deals damage"
   priority: 1
   contribution: 5
+heal:
+  label: "Deals heal"
+  priority: 4
+  contribution: 2
 applus:
   label: "Adds attack point"
   priority: 4
   contribution: 5
-appluss1:
+applus1:
   label: "Adds attack point pincer"
   priority: 3
   contribution: 5
@@ -62,3 +78,7 @@ cdminus1:
   label: "Lowers cooldown pincer"
   priority: 4
   contribution: 5
+buffplus1:
+  label: "Increases beneficial effect duration"
+  priority: 4
+  contribution: 3

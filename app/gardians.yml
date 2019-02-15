@@ -1,39 +1,87 @@
-rook_indra:
-  name: 'Indra'
-  direction: 'rook'
-  abilities:
-    - 'cleanse'
-    - 'bimmun'
 knight_claudia:
   name: 'Claudia'
   direction: 'knight'
-  abilities:
-    - 'cleansec'
-    - 'batk'
-    - 'bcrit'
-king_dia:
+  skills:
+    - 'cleanses1' # S1
+    - 'batk'      # S2
+    - 'bcrit'     # S2
+knight_dia:
   name: 'Dia'
-  direction: 'king'
-  abilities:
+  direction: 'knight'
+  skills:
     - 'dampatk'
     - 'dps'
+    - 'dbuffplus'
 queen_jorm:
   name: 'Jorm'
   direction: 'queen'
-  abilities:
+  skills:
     - 'batk'
     - 'bcrit'
     - 'bampatk'
     - 'dbdef'
-    - 'applusa'
-bishop_fritz:
+    - 'applus'
+queen_lirina:
+  name: 'Lirina'
+  direction: 'queen'
+  skills:
+    - 'bbatk'
+    - 'applus1'
+king_dia:
+  name: 'Dia'
+  direction: 'king'
+  skills:
+    - 'dampatk'
+    - 'dps'
+king_bergis:
+  name: 'Bergis'
+  direction: 'king'
+  skills:
+    - 'applus1'
+    - 'cleanses1'
+    - 'heal'
+    - 'dbatk'
+rook_indra:
+  name: 'Indra'
+  direction: 'rook'
+  skills:
+    - 'cleanse'
+    - 'bimmun'
+rook_fritz:
   name: 'Fritz'
-  direction: 'bishop'
-  abilities:
-    - 'cdminu'
+  direction: 'rook'
+  skills:
     - 'cdminus1'
+    - 'breducdmg'
 rook_tahn:
   name: 'Tahn'
   direction: 'rook'
-  abilities:
+  skills:
+    - 'dps'
+bishop_fritz:
+  name: 'Fritz'
+  direction: 'bishop'
+  skills:
+    - 'cdminus1'
+    - 'cdminu'
+bishop_krishna:
+  name: 'Krishna'
+  direction: 'bishop'
+  skills:
+    - 'bshield'
+    - 'bimmun'
+    - 'buffplus1'
+    - 'dbdef'
+bishop_jorm:
+  name: 'Jorm'
+  direction: 'bishop'
+  skills:
+    - 'bampatk'
+    - 'applus'
+    - 'dbdef'
+    - 'bshield'
+bishop_tahn:
+  name: 'Tahn'
+  direction: 'bishop'
+  skills:
     - 'dps'
