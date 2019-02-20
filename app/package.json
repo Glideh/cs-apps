@@ -3,11 +3,15 @@
   "version": "0.0.1",
   "description": "Chain Strike GvG Team Finder",
   "author": "Pierre de LESPINAY <gprod.net+github@gmail.com>",
+  "repository": "git@github.com:Glideh/cs-gvg-teams.git",
+  "license": "MIT",
   "main": "main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node bot.js",
+    "test": "node main.js"
   },
   "dependencies": {
+    "discord.js": "^11.4.2",
     "js-yaml": "3.12.1"
   }
 }
