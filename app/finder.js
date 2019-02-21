@@ -4,11 +4,11 @@ const Fs = require('fs');
 let implementedGardians = Yaml.safeLoad(Fs.readFileSync('./gardians.yml', 'utf8'));
 
 const directions = {
-    knight: 'cava',
-    queen: 'reine',
-    king: 'roi',
-    rook: 'tour',
-    bishop: 'fou',
+    knight: null,
+    queen: null,
+    king: null,
+    rook: null,
+    bishop: null,
 };
 
 
@@ -112,9 +112,7 @@ function teamCRC(team)
 
 function showTeam(team)
 {
-    return Object.keys(directions).map((direction) => (
-        (':' + directions[direction] + ': ' + (team[direction] ? team[direction].name : '')).padEnd(15)
-    )).join(' | ');
+    return teamCRC(team);
 }
 
 
