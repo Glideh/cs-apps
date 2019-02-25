@@ -25,7 +25,7 @@ queen_lirina:
   name: 'Lirina'
   direction: 'queen'
   skills:
-    - 'bbatk'
+    - 'dbatk'
     - 'applus1'
 queen_fritz:
   name: 'Fritz'

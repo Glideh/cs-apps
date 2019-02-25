@@ -1,84 +1,84 @@
 batk:
   label: "Increases attack power"
   priority: 1
-  contribution: 1
+  power: 4
 bampatk:
   label: "Increases attack damage"
   priority: 5
-  contribution: 5
+  power: 4
 bcrit:
   label: "Increases crit damage"
   priority: 1
-  contribution: 5
+  power: 4
 bcritrate:
   label: "Increases crit rate"
   priority: 5
-  contribution: 3
+  power: 3
 bdef:
   label: "Increases defense"
   priority: 5
-  contribution: 1
+  power: 1
 breducdmg:
   label: "Decreases damage received"
   priority: 5
-  contribution: 1
+  power: 1
 bshield:
   label: "Adds a shield"
   priority: 5
-  contribution: 1
+  power: 1
 bimmun:
   label: "Immunity"
   priority: 1
-  contribution: 3
+  power: 3
 dbatk:
   label: "Decreases attack power"
   priority: 2
-  contribution: 3
+  power: 2
 dbdef:
   label: "Decreases defense"
   priority: 1
-  contribution: 4
+  power: 2
 dampatk:
   label: "Increases received damage"
   priority: 1
-  contribution: 5
+  power: 4
 dbuffplus:
   label: "Increases weakening effect duration"
   priority: 1
-  contribution: 5
+  power: 4
 cleanse:
   label: "Cleanses weakening effects"
   priority: 2
-  contribution: 4
+  power: 2
 cleanses1:
   label: "Cleanses weakening effects pincer"
   priority: 2
-  contribution: 4
+  power: 2
 dps:
   label: "Deals damage"
   priority: 1
-  contribution: 5
+  power: 5
 heal:
   label: "Deals heal"
   priority: 4
-  contribution: 2
+  power: 1
 applus:
   label: "Adds attack point"
   priority: 4
-  contribution: 5
+  power: 3
 applus1:
   label: "Adds attack point pincer"
   priority: 3
-  contribution: 5
+  power: 3
 cdminu:
   label: "Lowers cooldown"
   priority: 4
-  contribution: 5
+  power: 4
 cdminus1:
   label: "Lowers cooldown pincer"
   priority: 4
-  contribution: 5
+  power: 4
 buffplus1:
   label: "Increases beneficial effect duration"
   priority: 4
-  contribution: 3
+  power: 3

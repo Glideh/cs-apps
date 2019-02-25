@@ -2,6 +2,7 @@ const Yaml = require('js-yaml');
 const Fs = require('fs');
 
 let implementedGardians = Yaml.safeLoad(Fs.readFileSync('./gardians.yml', 'utf8'));
+let implementedSkills = Yaml.safeLoad(Fs.readFileSync('./skills.yml', 'utf8'));
 
 const directions = {
     knight: null,
@@ -32,6 +33,7 @@ function skillAlreadyInTeam(gardian, team)
             continue;
         }
         if (teamSkill.indexOf(gardian.skills[y]) !== -1) {
+            // console.log(gardian.skills[y] + ' skill already there');
             return true;
         }
     }
@@ -69,6 +71,20 @@ function canFitIn(team, gardian)
 }
 
 
+function teamPower(team)
+{
+    let power = 0;
+    for (let direction in team) {
+        for (let x in team[direction].skills) {
+            // console.log('Skill ' + team[direction].skills[x]);
+            power += implementedSkills[team[direction].skills[x]].power;
+        }
+    }
+
+    return power;
+}
+
+
 /**
  * Checks if the team's gardians can fit together
  */
@@ -78,6 +94,7 @@ function teamIsFit(team)
         let gardian = team[direction];
         let teamWithoutGardian = Object.keys(team).map(d => team[d] === gardian ? null : team[d]);
         if (!canFitIn(teamWithoutGardian, gardian)) {
+            // console.log(`${gardian.name} can't fit`);
             return false;
         }
     }
@@ -192,4 +209,12 @@ function getGardiansList()
 }
 
 
-module.exports = {findTeam, teamIsValid, teamIsFit, showTeam, getGardiansList, implementedGardians};
+module.exports = {
+    findTeam,
+    teamIsValid,
+    teamIsFit,
+    showTeam,
+    getGardiansList,
+    implementedGardians,
+    teamPower
+};
