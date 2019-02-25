@@ -12,6 +12,10 @@ const directions = {
 };
 
 
+/**
+ * Checks if one of the gardian's skills is found in the team
+ * Exception for the DPS
+ */
 function skillAlreadyInTeam(gardian, team)
 {
     let teamSkill = [];
@@ -35,6 +39,12 @@ function skillAlreadyInTeam(gardian, team)
 }
 
 
+/**
+ * Checks if the gardian can fit in the team
+ * - The direction slot must be empty (not already a gardian with the same direction)
+ * - The same gardian must not be found (regardless of the direction)
+ * - One of his skills must not be found
+ */
 function canFitIn(team, gardian)
 {
     for (let direction in team) {
@@ -59,19 +69,41 @@ function canFitIn(team, gardian)
 }
 
 
-function shuffleObject(data)
+/**
+ * Checks if the team's gardians can fit together
+ */
+function teamIsFit(team)
 {
-    return Object.keys(data)
-        .map((key) => ({key, value: data[key]}))
-        .sort((a, b) => Math.round(Math.random()) === 1)
-        .reduce((acc, e) => {
-        acc[e.key] = e.value;
-        return acc;
-        }, {})
-    ;
+    for (let direction in team) {
+        let gardian = team[direction];
+        let teamWithoutGardian = Object.keys(team).map(d => team[d] === gardian ? null : team[d]);
+        if (!canFitIn(teamWithoutGardian, gardian)) {
+            return false;
+        }
+    }
+    return true;
 }
 
 
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+}
+
+
+function shuffleObject(data)
+{
+    let dataArray = Object.keys(data);
+    shuffleArray(dataArray);
+    return dataArray.map(id => data[id]);
+}
+
+
+/**
+ * Finds gardians that can fit together
+ */
 function findTeam(userGardians)
 {
     let team = /*shuffleObject*/({
@@ -160,4 +192,4 @@ function getGardiansList()
 }
 
 
-module.exports = {findTeam, teamIsValid, showTeam, getGardiansList};
+module.exports = {findTeam, teamIsValid, teamIsFit, showTeam, getGardiansList, implementedGardians};
