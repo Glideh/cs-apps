@@ -6,6 +6,10 @@ bampatk:
   label: "Increases attack damage"
   priority: 5
   power: 4
+bampatk15:
+  label: "Increases attack damage 15%"
+  priority: 5
+  power: 3
 bcrit:
   label: "Increases crit damage"
   priority: 1

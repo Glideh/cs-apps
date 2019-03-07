@@ -12,6 +12,21 @@ knight_dia:
     - 'dampatk'
     - 'dps'
     - 'dbuffplus'
+knight_jorm:
+  name: 'Jorm'
+  direction: 'knight'
+  skills:
+    - 'bampatk'
+    - 'bimmun'
+    - 'applus'
+queen_bergis:
+  name: 'Bergis'
+  direction: 'queen'
+  skills:
+    - 'applus1'
+    - 'cleanses1'
+    - 'heal'
+    - 'dbatk'
 queen_jorm:
   name: 'Jorm'
   direction: 'queen'
@@ -46,18 +61,32 @@ king_bergis:
     - 'cleanses1'
     - 'heal'
     - 'dbatk'
-rook_indra:
-  name: 'Indra'
+rook_bergis:
+  name: 'Bergis'
   direction: 'rook'
   skills:
-    - 'cleanse'
-    - 'bimmun'
+    - 'applus1'
+    - 'cleanses1'
+    - 'heal'
+    - 'dbatk'
 rook_fritz:
   name: 'Fritz'
   direction: 'rook'
   skills:
     - 'cdminus1'
     - 'breducdmg'
+rook_haba:
+  name: 'Haba'
+  direction: 'rook'
+  skills:
+    - 'dps'
+    - 'bampatk15'
+rook_indra:
+  name: 'Indra'
+  direction: 'rook'
+  skills:
+    - 'cleanse'
+    - 'bimmun'
 rook_tahn:
   name: 'Tahn'
   direction: 'rook'
