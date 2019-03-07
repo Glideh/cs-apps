@@ -1,3 +1,11 @@
+knight_bergis:
+  name: 'Bergis'
+  direction: 'knight'
+  skills:
+    - 'applus1'
+    - 'cleanses1'
+    - 'heal'
+    - 'dbatk'
 knight_claudia:
   name: 'Claudia'
   direction: 'knight'
