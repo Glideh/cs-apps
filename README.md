@@ -83,9 +83,9 @@ const directions = {
 * The gardian is placed if
   * The direction slot is free
   * It is not already there (whatever the direction)
-  * His skill is not already there
+  * None of its skills is already there
 * Each generated team is then removed if
-  * Is is duplicated
+  * It is duplicated
   * It is not complete (empty slots remaining)
 * Teams are then sorted by "skill power" sum
 
