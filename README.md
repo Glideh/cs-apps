@@ -4,27 +4,6 @@ A node application allowing to find teams for Chain Strike GvG bosses with its D
 
 ## Bot usage
 
-### Emojies
-
-<img src="https://cdn.discordapp.com/emojis/469769877524054027.png?v=1" width="15px">
-<img src="https://cdn.discordapp.com/emojis/469769877658533889.png?v=1" width="15px">
-<img src="https://cdn.discordapp.com/emojis/469769877805334530.png?v=1" width="15px">
-<img src="https://cdn.discordapp.com/emojis/469769878069444619.png?v=1" width="15px">
-<img src="https://cdn.discordapp.com/emojis/469769877746483203.png?v=1" width="15px">
-
-These emojies need to be installed in the Discord server.  
-The names of each one have to be configured in `controller.js` in the function `initDirectionEmojies()`
-
-```javascript
-const directions = {
-    knight: `emoji_name_for_knight`,
-    queen: `emoji_name_for_queen`,
-    king: `emoji_name_for_king`,
-    rook: `emoji_name_for_rook`,
-    bishop: `emoji_name_for_bishop`,
-};
-```
-
 ### Listing the gardians implemented
 
     !g gardians
@@ -67,6 +46,23 @@ Example:
 <img src="https://cdn.discordapp.com/emojis/469769877524054027.png?v=1" width="15px"> Claudia, <img src="https://cdn.discordapp.com/emojis/469769877658533889.png?v=1" width="15px"> Lirina, <img src="https://cdn.discordapp.com/emojis/469769877805334530.png?v=1" width="15px"> Dia, <img src="https://cdn.discordapp.com/emojis/469769878069444619.png?v=1" width="15px"> Tahn, <img src="https://cdn.discordapp.com/emojis/469769877746483203.png?v=1" width="15px"> Krishna  
 <img src="https://cdn.discordapp.com/emojis/469769877524054027.png?v=1" width="15px"> Claudia, <img src="https://cdn.discordapp.com/emojis/469769877658533889.png?v=1" width="15px"> Lirina, <img src="https://cdn.discordapp.com/emojis/469769877805334530.png?v=1" width="15px"> Dia, <img src="https://cdn.discordapp.com/emojis/469769878069444619.png?v=1" width="15px"> Tahn, <img src="https://cdn.discordapp.com/emojis/469769877746483203.png?v=1" width="15px"> Fritz  
 <img src="https://cdn.discordapp.com/emojis/469769877524054027.png?v=1" width="15px"> Claudia, <img src="https://cdn.discordapp.com/emojis/469769877658533889.png?v=1" width="15px"> Lirina, <img src="https://cdn.discordapp.com/emojis/469769877805334530.png?v=1" width="15px"> Dia, <img src="https://cdn.discordapp.com/emojis/469769878069444619.png?v=1" width="15px"> Indra, <img src="https://cdn.discordapp.com/emojis/469769877746483203.png?v=1" width="15px"> Fritz
+
+### Emojies
+
+<img src="https://cdn.discordapp.com/emojis/469769877524054027.png?v=1" width="15px"> <img src="https://cdn.discordapp.com/emojis/469769877658533889.png?v=1" width="15px"> <img src="https://cdn.discordapp.com/emojis/469769877805334530.png?v=1" width="15px"> <img src="https://cdn.discordapp.com/emojis/469769878069444619.png?v=1" width="15px"> <img src="https://cdn.discordapp.com/emojis/469769877746483203.png?v=1" width="15px">
+
+These emojies need to be installed in the Discord server.  
+The names of each one have to be configured in `controller.js` in the function `initDirectionEmojies()`
+
+```javascript
+const directions = {
+    knight: `emoji_name_for_knight`,
+    queen: `emoji_name_for_queen`,
+    king: `emoji_name_for_king`,
+    rook: `emoji_name_for_rook`,
+    bishop: `emoji_name_for_bishop`,
+};
+```
 
 ## Server
 
