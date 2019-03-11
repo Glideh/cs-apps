@@ -2,17 +2,20 @@ const Finder = require('./finder');
 const Controller = require('./controller');
 
 const myGardians = [
-    'knight_bergis',
     'knight_claudia',
     'knight_dia',
     'queen_bergis',
     'queen_jorm',
     'queen_lirina',
+    'queen_fritz',
     'king_dia',
     'king_bergis',
-    'rook_indra',
+    'king_fritz',
     'rook_fritz',
+    'rook_haba',
+    'rook_indra',
     'rook_tahn',
+    'bishop_bergis',
     'bishop_fritz',
     'bishop_krishna',
     'bishop_jorm',

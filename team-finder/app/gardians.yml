@@ -55,12 +55,6 @@ queen_fritz:
   direction: 'queen'
   skills:
     - 'cdminus1'
-king_dia:
-  name: 'Dia'
-  direction: 'king'
-  skills:
-    - 'dampatk'
-    - 'dps'
 king_bergis:
   name: 'Bergis'
   direction: 'king'
@@ -69,6 +63,18 @@ king_bergis:
     - 'cleanses1'
     - 'heal'
     - 'dbatk'
+king_dia:
+  name: 'Dia'
+  direction: 'king'
+  skills:
+    - 'dampatk'
+    - 'dps'
+king_fritz:
+  name: 'Fritz'
+  direction: 'king'
+  skills:
+    - 'cdminus1'
+    - 'cdminu'
 rook_bergis:
   name: 'Bergis'
   direction: 'rook'
@@ -100,6 +106,13 @@ rook_tahn:
   direction: 'rook'
   skills:
     - 'dps'
+bishop_bergis:
+  name: 'Bergis'
+  direction: 'bishop'
+  skills:
+    - 'applus1'
+    - 'cleanses1'
+    - 'dbatk'
 bishop_fritz:
   name: 'Fritz'
   direction: 'bishop'
