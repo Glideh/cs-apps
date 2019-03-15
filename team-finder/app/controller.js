@@ -15,9 +15,12 @@ function gardianToString(gardian, withId)
 
 function teamToString(team)
 {
-    let teamStrings = Object.keys(team).map(direction => {
-        return gardianToString(team[direction]);
+    let power = 'Note: ' + team.power;
+    delete team.power;
+    let teamStrings = Object.keys(team).map(key => {
+        return gardianToString(team[key]);
     });
+    teamStrings.unshift(power);
     return teamStrings.join(', ');
 }
 
@@ -57,15 +60,14 @@ function find(args)
     for (let i = 0; i < 100; i++) {
         let team = Finder.findTeam(args);
         if (Finder.teamIsValid(team, teams)) {
+            team.power = Finder.teamPower(team);
             teams.push(team);
         }
     }
     console.log(`${teams.length} teams found`);
     teams.sort((teama, teamb) => {
-        let scorea = Finder.teamPower(teama);
-        let scoreb = Finder.teamPower(teamb);
-        if (scorea > scoreb) return -1;
-        if (scorea < scoreb) return 1;
+        if (teama.power > teamb.power) return -1;
+        if (teama.power < teamb.power) return 1;
         return 0;
     });
     if (teams.length !== 0) {
@@ -88,15 +90,20 @@ function message(input)
     if (!input.content.startsWith(prefix)) {
         return;
     }
-    let args = input.content.replace(prefix, '').split(' ');
+    let args = input.content
+        .slice(prefix.length)
+        .replace('\'', '')
+        .split(/[\n ,]+/)
+        .filter(w => w.length > 0)
+    ;
     let command = args.shift();
     if (command === 'gardians') {
         let output = gardians();
-        input.channel.send(output);
+        input.channel.send(output, {split: true});
     }
     if (command === 'find') {
         let output = find(args);
-        input.channel.send(output);
+        input.channel.send(output, {split: true});
     }
 }
 

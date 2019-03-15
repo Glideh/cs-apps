@@ -61,7 +61,7 @@ cleanses1:
 dps:
   label: "Deals damage"
   priority: 1
-  power: 5
+  power: 7
 heal:
   label: "Deals heal"
   priority: 4
@@ -69,11 +69,11 @@ heal:
 applus:
   label: "Adds attack point"
   priority: 4
-  power: 3
+  power: 2
 applus1:
   label: "Adds attack point pincer"
   priority: 3
-  power: 3
+  power: 2
 cdminu:
   label: "Lowers cooldown"
   priority: 4

@@ -4,6 +4,7 @@ const Controller = require('./controller');
 const myGardians = [
     'knight_claudia',
     'knight_dia',
+    'knight_bergis',
     'queen_bergis',
     'queen_jorm',
     'queen_lirina',
@@ -15,7 +16,6 @@ const myGardians = [
     'rook_haba',
     'rook_indra',
     'rook_tahn',
-    'bishop_bergis',
     'bishop_fritz',
     'bishop_krishna',
     'bishop_jorm',
